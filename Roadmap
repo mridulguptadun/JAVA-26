@@ -1,1 +1,320 @@
+🚀 Phase 1: Java Basics (Foundation)
+
+Introduction to Java
+
+👉 What is Java?
+👉 Features of Java
+👉 JDK, JRE, JVM
+👉 Java Program Structure
+👉 Compilation Process
+👉 Hello World Program
+
+Variables & Data Types
+
+👉 Variables
+👉 Primitive Data Types
+👉 Non-Primitive Data Types
+👉 Literals
+👉 Type Casting
+👉 Type Promotion
+
+Operators
+
+👉 Arithmetic
+👉 Assignment
+👉 Comparison
+👉 Logical
+👉 Bitwise
+👉 Unary
+👉 Ternary
+
+User Input
+
+👉 Scanner Class
+👉 Reading int
+👉 double
+👉 String
+👉 boolean
+👉 char
+
+Decision Making
+
+👉 if
+👉 if-else
+👉 else-if
+👉 Nested if
+👉 Switch
+👉 Enhanced Switch
+
+Loops
+
+👉 while
+👉 do-while
+👉 for
+👉 Nested Loops
+👉 break
+👉 continue
+👉 label
+
+Pattern Programs
+
+👉 Star Patterns
+👉 Pyramid
+👉 Diamond
+👉 Hollow Patterns
+👉 Number Patterns
+
+Methods
+
+👉 Method Declaration
+👉 Parameters
+👉 Return Type
+👉 Method Overloading
+👉 Recursion
+👉 Varargs
+
+🚀 Phase 2: Object-Oriented Programming (OOP)
+
+Classes & Objects
+
+👉 Class
+👉 Object
+👉 Fields
+👉 Methods
+
+Constructors
+
+👉 Default Constructor
+👉 Parameterized Constructor
+👉 Constructor Overloading
+👉 this()
+👉 super()
+
+Encapsulation
+
+👉 private
+👉 Getter
+👉 Setter
+
+Inheritance
+
+👉 Single
+👉 Multilevel
+👉 Hierarchical
+
+Polymorphism
+
+👉 Method Overloading
+👉 Method Overriding
+
+Abstraction
+
+👉 Abstract Class
+👉 Abstract Method
+
+Interface
+
+👉 Interface
+👉 Multiple Interface
+👉 Default Method
+👉 Static Method
+
+Advanced OOP
+
+👉 final
+👉 static
+👉 this
+👉 super
+👉 instanceof
+👉 Object Class
+
+🚀 Phase 3: Arrays & Strings
+
+👉 Arrays
+👉 1D Array
+👉 2D Array
+👉 Jagged Array
+👉 Array Methods
+👉 Strings
+👉 String
+👉 StringBuffer
+👉 StringBuilder
+
+Operations
+
+👉 compare
+👉 equals
+👉 split
+👉 substring
+👉 replace
+👉 trim
+👉 startsWith
+👉 endsWith
+👉 contains
+
+🚀 Phase 4: Exception Handling
+
+👉 try
+👉 catch
+👉 finally
+👉 throw
+👉 throws
+👉 Custom Exception
+👉 Multiple Catch
+
+🚀 Phase 5: Collections Framework
+
+👉 List
+👉 ArrayList
+👉 LinkedList
+👉 Vector
+👉 Stack
+👉 Queue
+👉 PriorityQueue
+👉 ArrayDeque
+👉 Set
+👉 HashSet
+👉 LinkedHashSet
+👉 TreeSet
+👉 Map
+👉 HashMap
+👉 LinkedHashMap
+👉 TreeMap
+👉 Hashtable
+👉 Iterator
+👉 Iterator
+👉 ListIterator
+👉 Comparable & Comparator
+
+🚀 Phase 6: File Handling
+
+👉 File Class
+👉 Read File
+👉 Write File
+👉 BufferedReader
+👉 BufferedWriter
+👉 FileReader
+👉 FileWriter
+
+🚀 Phase 7: Multithreading
+
+👉 Thread Class
+👉 Runnable
+👉 Thread Lifecycle
+👉 Synchronization
+👉 Deadlock
+👉 Executor Framework
+
+🚀 Phase 8: Java 8 Features
+
+👉 Lambda Expressions
+👉 Functional Interface
+👉 Method Reference
+👉 Stream API
+👉 Optional
+👉 Date & Time API
+
+🚀 Phase 9: JDBC
+
+👉 Database Connection
+👉 CRUD
+👉 PreparedStatement
+👉 CallableStatement
+👉 Transactions
+
+🚀 Phase 10: Advanced Java
+
+👉 Packages
+👉 Access Modifiers
+👉 Inner Class
+👉 Anonymous Class
+👉 Enum
+👉 Generics
+👉 Reflection API
+👉 Serialization
+👉 Networking
+
+🚀 Phase 11: Design Patterns
+
+👉 Singleton
+👉 Factory
+👉 Builder
+👉 Adapter
+👉 Observer
+👉 Strategy
+👉 MVC
+
+🚀 Phase 12: Spring Framework
+
+👉 IoC
+👉 Dependency Injection
+👉 Beans
+👉 Spring Core
+
+🚀 Phase 13: Spring Boot
+
+👉 REST API
+👉 Controller
+👉 Service
+👉 Repository
+👉 Validation
+👉 Exception Handling
+👉 Spring Data JPA
+👉 Hibernate
+👉 MySQL Integration
+
+🚀 Phase 14: Security
+
+👉 Spring Security
+👉 JWT
+👉 OAuth
+
+🚀 Phase 15: Build Tools
+
+👉 Maven
+👉 Gradle
+
+🚀 Phase 16: Testing
+
+👉 JUnit
+👉 Mockito
+
+🚀 Phase 17: Microservices
+
+👉 REST
+👉 Eureka
+👉 API Gateway
+👉 Config Server
+👉 Docker Basics
+
+🚀 Phase 18: DSA in Java
+
+👉 Arrays
+👉 Strings
+👉 Linked List
+👉 Stack
+👉 Queue
+👉 Tree
+👉 Graph
+👉 Heap
+👉 Hashing
+👉 Recursion
+👉 Sorting
+👉 Searching
+👉 Dynamic Programming
+👉 Backtracking
+
+🚀 Phase 19: SQL
+
+👉 SELECT
+👉 INSERT
+👉 UPDATE
+👉 DELETE
+👉 JOIN
+👉 GROUP BY
+👉 HAVING
+👉 Subquery
+👉 Views
+👉 Indexes
+👉 Transactions
 
