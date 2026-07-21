@@ -521,4 +521,151 @@ ________________________________________________________________________________
 | Block         | Inside `{}`                | Block only   | Until block ends                          |
 ---------------------------------------------------------------------------------------------------------
 
+========================================
+| Static vs Non-Static Methods in Java |
+========================================
+👉 A static method is a method that belongs to the class rather than an object. It can be called without creating an object of the class.
+   👉 Declared using static keyword.
+   👉 Belongs to the class.
+   👉 Does not require an object.
+   👉 Can directly access static variables and static methods.
+   👉 Cannot directly access instance variables and instance methods.
 
+   static returnType methodName()
+   {
+       // code
+   }
+--------------------------------------- // Static Method Calling
+   public class Main {
+       public static void hello() {
+           System.out.println("Hello Java");
+       }
+       public static void main(String[] args) {
+           hello();
+       }
+   }
+-------------------------------------- // Calling Static Method Using Class Name
+   public class Main {
+       public static void show() {
+           System.out.println("Static Method");
+       }
+       public static void main(String[] args) {
+           Main.show();
+       }
+   }
+
+👉 A non-static method is a method that belongs to an object of a class and requires an object to be called.
+   👉 Does not use static keyword.
+   👉 Belongs to object.
+   👉 Requires object creation.
+   👉 Can access both static and instance members.
+   👉 Each object can have different data.
+
+   returnType methodName()
+   {
+       // code
+   }
+---------------------------------------------- // Non-Static Method Calling
+   public class Main {
+       public void hello() {
+           System.out.println("Hello Java");
+       }
+       public static void main(String[] args) {
+           Main obj = new Main();
+           obj.hello();
+       }
+   }
+
+Static vs Non-Static Difference
+--------------------------------
+____________________________________________________
+| Static Method           | Non-Static Method      |
+| ----------------------- | ---------------------- |
+| Belongs to class        | Belongs to object      |
+| Uses `static` keyword   | No `static` keyword    |
+| Object not required     | Object required        |
+| Called using class name | Called using object    |
+| Memory once             | Each object has access |
+| Faster                  | Slightly more overhead |
+----------------------------------------------------
+
+   class Student {
+       String name;
+       static String school = "ABC School";
+       public void showName() {
+           System.out.println(name);
+       }
+   
+       public static void showSchool() {
+           System.out.println(school);
+       }
+   }
+   
+   public class Main {
+       public static void main(String[] args) {
+           Student s1 = new Student();
+           s1.name = "Mridul";
+           s1.showName();
+           Student.showSchool();
+       }
+   }
+
+O/P : Mridul
+      ABC School
+
+=========================
+| Varargs (...) in Java |
+=========================
+👉 Varargs (Variable Arguments) allow a method to accept a variable number of arguments of the same type.
+   👉 Introduced in Java 5.
+   👉 Uses three dots (...).
+   👉 Allows passing zero or more arguments.
+   👉 Internally works as an array.
+   👉 A method can have only one varargs parameter.
+   👉 Varargs must be the last parameter.
+
+   returnType methodName(dataType... variableName)
+   {
+       // code
+   }
+--------------------------------------------------- // Simple Varargs
+public class Main {
+    public static void show(int... numbers) {
+        for(int n : numbers) {
+            System.out.println(n);
+        }
+    }
+
+    public static void main(String[] args) {
+        show(10,20,30);
+    }
+}
+---------------------------------------------------- // Sum of Numbers
+public class Main {
+    public static int sum(int... numbers) {
+        int total = 0;
+        for(int n : numbers) {
+            total += n;
+        }
+        return total;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sum(10,20));
+        System.out.println(sum(10,20,30));
+        System.out.println(sum(1,2,3,4,5));
+    }
+}
+------------------------------------------------------ // Varargs with Normal Parameter
+public class Main {
+    public static void student(String name, int... marks) {
+        System.out.println(name);
+        for(int m : marks) {
+            System.out.println(m);
+        }
+    }
+
+    public static void main(String[] args) {
+        student("Mridul",90,85,95);
+    }
+}
