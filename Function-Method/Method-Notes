@@ -1,0 +1,24 @@
+================================
+| What is a Function (Method)? |
+================================
+A method is a block of code that performs a specific task. It runs only when it is called. Methods improve code 
+reusability, readability, and modularity.
+
+Performs a specific task.
+Runs only when called.
+Reduces code duplication.
+Improves readability.
+Improves code reusability.
+Makes programs modular.
+Can accept parameters.
+Can return a value.
+
+  public class Main {
+      public static void hello() {
+          System.out.println("Hello Java");
+      }
+      public static void main(String[] args) {
+          hello();
+      }
+  }
+
