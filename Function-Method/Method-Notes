@@ -244,3 +244,64 @@ public class Main {
         greet("Neha");
     }
 }
+
+=======================
+| Return Type in Java |
+=======================
+👉 A return type specifies the type of value that a method sends back to the caller after execution.
+   👉 Every method has a return type.
+   👉 void means no value is returned.
+   👉 Non-void methods must return a value.
+   👉 The returned value must match the declared return type.
+   👉 The return keyword is used to send the value back.
+
+returnType methodName(parameters)
+{
+    return value;
+}
+------------------------------------ -> "This method return int value." 
+public static int add(int a, int b)
+{
+    return a + b;
+}
+------------------------------------ -> "This method does not return any value."
+public static void hello()
+{
+    System.out.println("Hello");
+}
+----------------------------------- -> Returning an Integer
+public class Main {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int result = add(10, 20);
+        System.out.println(result);
+
+    }
+}
+------------------------------------- -> Returning a Square
+public class Main {
+    public static int square(int n) {
+        return n * n;
+    }
+
+    public static void main(String[] args) {
+        int ans = square(6);
+        System.out.println(ans);
+
+    }
+}
+------------------------------------- -> Returning a String
+public class Main {
+    public static String getName() {
+        return "Mridul";
+    }
+
+    public static void main(String[] args) {
+        String name = getName();
+        System.out.println(name);
+
+    }
+}
