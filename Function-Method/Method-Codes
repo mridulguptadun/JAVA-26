@@ -1,0 +1,89 @@
+✅ Calculator Using Methods
+
+import java.util.Scanner;
+public class Main {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public static double divide(int a, int b) {
+        return (double)a / b;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        System.out.println("Addition : " + add(a,b));
+        System.out.println("Subtraction : " + subtract(a,b));
+        System.out.println("Multiplication : " + multiply(a,b));
+        System.out.println("Division : " + divide(a,b));
+    }
+}
+
+✅ Student Result System
+
+public class Main {
+    public static int total(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static double percentage(int total) {
+        return total / 3.0;
+    }
+
+    public static String grade(double per) {
+        if(per >= 90) {
+            return "A";
+        }
+        else if(per >= 75) {
+            return "B";
+        }
+        else if(per >= 50) {
+            return "C";
+        }
+        else {
+            return "Fail";
+        }
+    }
+    public static void main(String[] args) {
+        int totalMarks = total(90,80,70);
+        double per = percentage(totalMarks);
+        System.out.println("Total : " + totalMarks);
+        System.out.println("Percentage : " + per);
+        System.out.println("Grade : " + grade(per));
+    }
+}
+
+✅ Number Utility Program
+
+public class Main {
+    public static boolean isEven(int n) {
+        return n % 2 == 0;
+    }
+
+    public static int square(int n) {
+        return n * n;
+    }
+
+    public static int cube(int n) {
+        return n * n * n;
+    }
+
+    public static void main(String[] args) {
+        int num = 5;
+        System.out.println("Even : " + isEven(num));
+        System.out.println("Square : " + square(num));
+        System.out.println("Cube : " + cube(num));
+    }
+}
+
