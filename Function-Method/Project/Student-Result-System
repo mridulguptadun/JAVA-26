@@ -1,0 +1,60 @@
+public class Main {
+
+    // Calculate Total Marks
+    public static int calculateTotal(int[] marks) {
+        int total = 0;
+        for(int m : marks) {
+            total += m;
+        }
+        return total;
+    }
+
+    // Calculate Percentage
+    public static double calculatePercentage(int total, int subjects) {
+
+        return total / (double) subjects;
+    }
+
+    // Find Highest Marks
+    public static int findHighest(int[] marks) {
+        int max = marks[0];
+        for(int m : marks) {
+            if(m > max) {
+                max = m;
+            }
+        }
+        return max;
+    }
+
+    // Find Grade
+    public static String getGrade(double percentage) {
+        if(percentage >= 90) {
+            return "A+";
+        }
+        else if(percentage >= 75) {
+            return "A";
+        }
+        else if(percentage >= 60) {
+            return "B";
+        }
+        else if(percentage >= 40) {
+            return "C";
+        }
+        else {
+            return "Fail";
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] marks = {85,92,78,90,88};
+        int total = calculateTotal(marks);
+        double percentage = calculatePercentage(total, marks.length);
+        int highest = findHighest(marks);
+        String grade = getGrade(percentage);
+
+        System.out.println("Total Marks : " + total);
+        System.out.println("Percentage : " + percentage);
+        System.out.println("Highest Marks : " + highest);
+        System.out.println("Grade : " + grade);
+    }
+}
