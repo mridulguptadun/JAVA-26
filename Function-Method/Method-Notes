@@ -1,24 +1,246 @@
 ================================
 | What is a Function (Method)? |
 ================================
-A method is a block of code that performs a specific task. It runs only when it is called. Methods improve code 
-reusability, readability, and modularity.
+👉 A method is a block of code that performs a specific task. It runs only when it is called. Methods improve code 
+   reusability, readability, and modularity.
 
-Performs a specific task.
-Runs only when called.
-Reduces code duplication.
-Improves readability.
-Improves code reusability.
-Makes programs modular.
-Can accept parameters.
-Can return a value.
+👉 Performs a specific task.
+👉 Runs only when called.
+👉 Reduces code duplication.
+👉 Improves readability.
+👉 Improves code reusability.
+👉 Makes programs modular.
+👉 Can accept parameters.
+👉 Can return a value.
 
-  public class Main {
-      public static void hello() {
-          System.out.println("Hello Java");
+  access_modifier static return_type methodName(parameters)
+  {
+      // Method body
+  }
+---------------------------------------------------------------------
+  public static void hello()
+  {
+      System.out.println("Hello Java");
+  }
+
+
+public   static   void   hello()   { ... }
+│          │        │       │
+│          │        │       └── Method Name
+│          │        └────────── Return Type
+│          └─────────────────── Static Keyword
+└────────────────────────────── Access Modifier
+
+
+👉 Access Modifier -> An access modifier determines where a method can be accessed from.
+_________________________________________
+| Modifier  | Accessible From           |
+| --------- | ------------------------- |
+| public    | Anywhere                  |
+| private   | Same class only           |
+| protected | Same package + subclasses |
+| default   | Same package              |
+-----------------------------------------
+
+👉 static Keyword -> The static keyword means the method belongs to the class rather than an object.
+👉 Return Type -> The return type specifies what value a method returns after execution.
+👉 Method Name -> The method name is the identifier used to call the method.
+  👉 Should begin with a letter, _, or $.
+  👉 Cannot start with a number.
+  👉 Cannot be a Java keyword.
+  👉 Use camelCase naming convention.
+👉 Parameters -> Parameters are variables that receive values when a method is called.
+👉 Method Body -> The method body contains the statements that define what the method does.
+
+  public class Main
+  {
+      public static void welcome()
+      {
+          System.out.println("Welcome to Java");
       }
-      public static void main(String[] args) {
-          hello();
+      public static void main(String[] args)
+      {
+          welcome();
       }
   }
 
+Key Points
+-----------
+👉 public → Method can be accessed from anywhere.
+👉 static → Method belongs to the class.
+👉 void → No value is returned.
+👉 welcome → Method name.
+👉 () → Parameters (currently empty).
+👉 {} → Method body.
+
+==========================
+| Method Calling in Java |
+==========================
+👉 Method calling is the process of invoking a method so that its code executes. methodName();
+  👉 A method executes only when it is called.
+  👉 A method can be called multiple times.
+  👉 Control transfers to the called method.
+  👉 After execution, control returns to the calling method.
+
+----------------------------------------------- // Simple Method Call
+public class Main {
+    public static void hello() {
+        System.out.println("Hello Java");
+    }
+    public static void main(String[] args) {
+        hello();   
+    }
+}
+
+Program Starts
+       │
+       ▼
+main() starts
+       │
+       ▼
+hello();
+       │
+       ▼
+hello() executes
+       │
+       ▼
+Prints:
+Hello Java
+       │
+       ▼
+Returns to main()
+       │
+       ▼
+Program Ends
+------------------------------------------------  // Calling a Method Multiple Times
+public class Main {                      
+    public static void hello() {
+        System.out.println("Hello");
+    }
+    public static void main(String[] args) {
+
+        hello();   
+        hello();
+        hello();
+    }
+}
+------------------------------------------------- // Calling Different Methods
+public class Main {
+    public static void welcome() {
+        System.out.println("Welcome");
+    }
+
+    public static void bye() {
+        System.out.println("Good Bye");
+    }
+
+    public static void main(String[] args) {
+        welcome();    
+        bye();
+    }
+}
+--------------------------------------------------- // One Method Calling Another
+public class Main {
+
+    public static void message() {
+        System.out.println("Have a Nice Day");
+    }
+
+    public static void welcome() {
+        System.out.println("Welcome");
+        message();
+    }
+
+    public static void main(String[] args) {
+        welcome();    
+    }
+}
+---------------------------------------------------- // Nested Method Calls
+public class Main {
+
+    public static void first() {
+        System.out.println("First");
+        second();
+    }
+
+    public static void second() {
+        System.out.println("Second");
+        third();
+    }
+
+    public static void third() {
+        System.out.println("Third");
+    }
+
+    public static void main(String[] args) {
+        first();    
+    }
+}
+
+=====================
+| Method Parameters |
+=====================
+👉 Parameters are variables declared in a method definition that receive values when the method is called.
+  👉 Parameters receive data from the caller.
+  👉 They are declared inside the parentheses ().
+  👉 A method can have zero, one, or multiple parameters.
+  👉 Parameters are local to the method.
+  👉 The values passed during the method call are called arguments.
+
+access_modifier static returnType methodName(dataType parameterName)
+{
+    // code
+}
+--------------------------------------------
+public static void greet(String name)
+{
+    System.out.println("Hello " + name);
+}
+
+String name -> Parameter
+"Mridul" ->  Argument
+greet("Mridul"); -> Method Call
+
+Parameter vs Argument
+----------------------
+_____________________________________________________________
+| Parameter                     | Argument                  |
+| ----------------------------- | ------------------------- |
+| Declared in method definition | Passed during method call |
+| Variable                      | Actual value              |
+| Receives data                 | Sends data                |
+-------------------------------------------------------------
+
+public class Main {
+    public static void add(int a, int b) {    // Multiple Parameters
+        System.out.println(a + b);
+    }
+
+    public static void main(String[] args) {
+        add(10, 20);
+    }
+}
+-------------------------------------------------------------  // Different Data Types
+public class Main {
+    public static void student(String name, int age, double marks) {
+        System.out.println("Name : " + name);
+        System.out.println("Age : " + age);
+        System.out.println("Marks : " + marks);
+    }
+
+    public static void main(String[] args) {
+        student("Aman", 18, 89.5);
+    }
+}
+--------------------------------------------------------------- // Calling Same Method with Different Values
+public class Main {
+    public static void greet(String name) {
+        System.out.println("Hello " + name);
+    }
+    public static void main(String[] args) {
+        greet("Aman");
+        greet("Rohit");
+        greet("Priya");
+        greet("Neha");
+    }
+}
