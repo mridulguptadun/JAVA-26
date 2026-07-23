@@ -1,0 +1,111 @@
+===============================
+| Object-Oriented Programming |
+===============================
+👉 Object-Oriented Programming (OOP) is a programming paradigm that uses classes and objects to organize code, allowing data and methods to be 
+   bundled together for better modularity, reusability, and maintainability.
+  👉 OOP stands for Object-Oriented Programming.
+  👉 Java is an object-oriented language.
+  👉 OOP is based on Classes and Objects.
+  👉 Objects contain data and methods.
+  👉 OOP improves code reusability and maintainability.
+  👉 The six main concepts are Class, Object, Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+Class in Java
+--------------
+👉 A Class is a blueprint or template used to create objects. It defines the properties (fields) and behaviors (methods) that the objects will have.
+    Blueprint → House
+    Class → Object
+
+Car Class
+      │
+      ├──────────────┐
+      │              │
+      ▼              ▼
+Car1            Car2
+Red             Blue
+BMW             Audi
+
+Car Class → Blueprint
+Car1, Car2 → Objects
+
+---------------------------------------------
+class ClassName {
+    // Fields (Variables)
+    // Constructors
+    // Methods
+}
+---------------------------------------------
+class Student {            // Student Class
+    String name;           // instance variable
+    int age;              // instance variable
+    void study() {        // Method
+        System.out.println("Student is studying");
+    }
+}
+
+
+Class Components
+------------------
+Class
+│
+├── Fields
+│
+├── Constructors
+│
+├── Methods
+│
+├── Nested Classes
+│
+└── Static Members
+
+👉 Fields (Instance Variables) -> Fields are variables declared inside a class that store the data of an object.
+
+class Student {
+    String name;
+    int age;
+    double marks;
+}
+
+👉 Methods -> Methods define the behavior or actions that an object can perform.
+
+class Student {
+    void study() {
+        System.out.println("Studying...");
+    }
+    void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+👉 Constructors -> A constructor is a special method used to initialize objects.
+
+class Student {
+    Student() {
+    }
+}
+
+Naming Convention (Java Standard)
+----------------------------------
+  👉 Student
+  👉 EmployeeDetails
+  👉 BankAccount
+  👉 LibraryManagement
+  👉 OnlineShopping
+  
+  👉 studentName
+  👉 employeeSalary
+  👉 accountBalance
+  
+  👉 study()
+  👉 depositMoney()
+  👉 calculateSalary()
+
+Important Points
+-----------------
+  👉 A class is a blueprint.
+  👉 A class is not an object.
+  👉 Objects are created from classes.
+  👉 A class can contain fields, methods, and constructors.
+  👉 One class can create many objects.
+  👉 Class names follow PascalCase.
+
