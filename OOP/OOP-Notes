@@ -327,5 +327,40 @@ _____________________________________________________________
    👉 Constructors are called automatically.
    👉 this() must be the first statement if used.
 
+========================
+| this Keyword in Java |
+========================
+👉 The this keyword is a reference variable that refers to the current object of a class.
+      this = "Current Object"
+
+   👉 Refer to the current object.
+   👉 Resolve variable shadowing.
+   👉 Call another constructor.
+   👉 Pass the current object.
+   👉 Return the current object.
+
+Student s1 = new Student();   // this = s1 
+
+class Student {
+    String name;
+    Student(String name) {
+        this.name = name;   // Left side this.name → Instance Variable  // Right side name → Local Variable (Parameter)
+    }  
+
+    void display() {
+        System.out.println(name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Rahul");
+        s1.display();
+    }
+}
 
 
+   👉 this refers to the current object.
+   👉 this() calls another constructor of the same class.
+   👉 this() must be the first statement in a constructor.
+   👉 this cannot be used in a static method because static methods belong to the class, not to any specific object.
