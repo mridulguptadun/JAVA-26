@@ -364,3 +364,79 @@ public class Main {
    👉 this() calls another constructor of the same class.
    👉 this() must be the first statement in a constructor.
    👉 this cannot be used in a static method because static methods belong to the class, not to any specific object.
+
+=================
+| Encapsulation |
+=================
+👉 Encapsulation is the process of wrapping data (fields) and methods that operate on the data into a single unit (class) and 
+   restricting direct access to the data.
+   Encapsulation = Data + Methods + Data Hiding
+
+class Student {
+
+    private String name;      ==> Private Variables (Data Hiding)
+    private int age;          ==> Private Variables (Data Hiding)
+
+    public void setName(String name) {     
+        this.name = name;
+    }
+
+    public void setAge(int age) {       ==> Setter
+        if(age > 0) {
+            this.age = age;
+        }
+    }
+
+    public String getName() {           ==> Getter
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setName("Rahul");
+        s.setAge(18);
+        System.out.println(s.getName());
+        System.out.println(s.getAge());
+    }
+}
+
+
+"Data Hiding is the practice of restricting direct access to the internal data of an object."
+
+👉 JavaBeans Convention -> Java Encapsulation Followstandard naming convention
+
+private String name;  // variables
+
+public String getName(){  // Getter
+    return name;
+}
+
+public void setName(String name){   // Setter
+    this.name = name;
+}
+
+================================
+| Encapsulation vs Data Hiding |
+================================
+_________________________________________________________________________________
+| Encapsulation                      | Data Hiding                              |
+| ---------------------------------- | ---------------------------------------- |
+| Wrapping data and methods together | Restricting direct access to data        |
+| Achieved using classes             | Achieved using `private` access modifier |
+| Broader concept                    | Part of Encapsulation                    |
+---------------------------------------------------------------------------------
+
+   👉 Encapsulation = Data + Methods + Data Hiding.
+   👉 Use private fields to protect object data.
+   👉 Use getters to read values.
+   👉 Use setters to update values safely.
+   👉 Encapsulation makes code secure, maintainable, and reusable.
+
+
+
