@@ -791,5 +791,61 @@ Summary
    👉 Use instanceof to safely check an object's type before downcasting.
 
 
+=======================
+| Abstraction in Java |
+=======================
+👉 Abstraction is the process of hiding implementation details and showing only the essential features of an object.
+
+   What to do → Show
+   How to do → Hide
+
+Abstract Class -> An abstract class is a class that cannot be instantiated and may contain both abstract and concrete methods.
+Abstract Method -> An abstract method is a method without a body. It must be implemented by the child class.
+
+abstract class Animal {
+    abstract void sound();
+}
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog Barks");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+
+Abstract Class vs Normal Class
+-------------------------------
+_______________________________________________________________
+| Normal Class                 | Abstract Class               |
+| ---------------------------- | ---------------------------- |
+| Object create kar sakte hain | Object create nahi kar sakte |
+| All methods implemented      | Abstract + Concrete methods  |
+| Instantiable                 | Non-instantiable             |
+---------------------------------------------------------------
+
+Abstract Class vs Interface
+---------------------------
+_______________________________________________________________________________________________________________________
+| Abstract Class       | Interface                                                                                    |
+| -------------------- | -------------------------------------------------------------------------------------------- |
+| `extends`            | `implements`                                                                                 |
+| Constructors allowed | No constructors                                                                              |
+| Variables + methods  | Mostly constants + abstract methods (modern Java also allows default/static/private methods) |
+| Single inheritance   | Multiple interfaces possible                                                                 |
+-----------------------------------------------------------------------------------------------------------------------
+
+Summary
+--------
+   👉 Abstraction hides implementation details and exposes only essential functionality.
+   👉 An abstract class cannot be instantiated.
+   👉 An abstract class can contain abstract methods and concrete methods.
+   👉 Child classes must implement all inherited abstract methods unless they are also abstract.
+   👉 Abstract classes can have constructors and fields.
+
 
 
