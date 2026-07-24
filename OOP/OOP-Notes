@@ -677,6 +677,118 @@ Summary
    👉 Overriding is the foundation of Runtime Polymorphism.
    👉 static, final, and private methods cannot be overridden.
 
+========================
+| Polymorphism in Java |
+========================
+👉 Polymorphism is the ability of an object to take many forms. It allows the same method or interface to behave 
+   differently based on the object that invokes it.
+
+   Poly = Many
+   Morphism = Forms
+
+Types of Polymorphism
+----------------------
+Polymorphism
+│
+├── Compile-Time Polymorphism -> Compile-Time Polymorphism is achieved through Method Overloading. The compiler decides which method to call.
+│      (Method Overloading)
+│
+└── Runtime Polymorphism -> Runtime Polymorphism is achieved through Method Overriding. The JVM decides which method to execute at runtime.
+       (Method Overriding)
+
+class Calculator {                       // Compile-Time Polymorphism 
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(5, 10));
+        System.out.println(c.add(2.5, 3.5));
+        System.out.println(c.add(1, 2, 3));
+    }
+}
+
+O/P : 15
+      6.0
+      6
+
+-----------------------------------------------------
+
+class Animal {                      // Runtime Polymorphism
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog Barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat Meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Dog();
+        a.sound();
+        a = new Cat();
+        a.sound();
+    }
+}
+
+O/P : Dog Barks
+      Cat Meows
+
+
+👉  Dynamic Method Dispatch -> Dynamic Method Dispatch is the mechanism by which a call to an overridden method is resolved at runtime rather 
+                               than compile time.
+
+👉  Upcasting -> Upcasting is the process of converting a child class object into a parent class reference.
+                 Animal obj = new Dog(); // Done automatically
+
+👉  Downcasting -> Downcasting is the process of converting a parent class reference back into a child class reference.
+                   Animal obj = new Dog();
+                   Dog d = (Dog) obj;
+
+----------------------------------------
+| Compile-Time vs Runtime Polymorphism |
+----------------------------------------
+__________________________________________________
+| Compile-Time            | Runtime              |
+| ----------------------- | -------------------- |
+| Method Overloading      | Method Overriding    |
+| Compiler decides        | JVM decides          |
+| Faster                  | Slightly slower      |
+| No inheritance required | Inheritance required |
+--------------------------------------------------
+
+Summary
+--------
+   👉 Polymorphism means one interface, many forms.
+   👉 Java supports Compile-Time Polymorphism through Method Overloading.
+   👉 Java supports Runtime Polymorphism through Method Overriding.
+   👉 Dynamic Method Dispatch allows the JVM to call the correct overridden method at runtime.
+   👉 Upcasting is automatic, while Downcasting requires explicit casting.
+   👉 Use instanceof to safely check an object's type before downcasting.
 
 
 
